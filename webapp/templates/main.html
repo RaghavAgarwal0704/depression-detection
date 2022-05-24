@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body background="{{ url_for('static', filename='image.webp') }}">
+    <style>
+      body {
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      h3,form{
+      font-family: "Monaco", monospace;
+      text-align: center;
+      }
+      h1,h2{
+      font-family: "Georgia", serif;
+      text-align: center;
+      }
+    </style>
+    <!-- <img src="{{ url_for('static', filename='image.webp') }}" IMG STYLE="position:absolute; TOP:60px; LEFT:700px;
+        WIDTH:150px; HEIGHT:150px"/> -->
+    <h1><u>File Upload</u></h1><br><br><br>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Classify"></p>
+    </form>
+  </body>
+</html>

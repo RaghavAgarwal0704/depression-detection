@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Result</title>
+    <style>
+       body {
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      h3,form {
+      font-family: "Monaco", monospace;
+      text-align: center;
+      }
+      h1,h2{
+      font-family: "Georgia", serif;
+      text-align: center;
+      }
+    </style>
+  </head>
+  
+  <body background="{{ url_for('static', filename='image.webp') }}">
+    <h1><u>Result</u></h1>
+    <h3>Text:{{data[0].text}}</h3>
+    <h2>Emotion:{{data[0].label}}</h2>
+    <form method="GET" action="/">
+      <p><input type="submit" value="Check again!"></p>
+    </form>
+  </body>
+</html>
